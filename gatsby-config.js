@@ -128,7 +128,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "GatsbyJS Airtable Advanced Starter";
+          ret.generator = "The Hub for SJMD";
           return ret;
         },
         query: `

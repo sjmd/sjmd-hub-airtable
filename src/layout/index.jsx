@@ -7,7 +7,7 @@ export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <div>
+      <div className="main-wrap flex flex-wrap overflow-hidden">
         <Helmet>
           <meta name="description" content={config.siteDescription} />
         </Helmet>

@@ -69,6 +69,8 @@ exports.createPages = async ({ graphql, actions }) => {
                     email
                     twitter
                     github
+                    bio
+                    shortBio
                   }
                 }
                 postMarkdown {
