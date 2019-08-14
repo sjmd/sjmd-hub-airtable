@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import moment from 'moment';
+const _ = require("lodash");
 import siteConfig from "../../../data/SiteConfig";
 import Gravatar from 'react-gravatar';
 
@@ -27,10 +28,10 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <section className="postListing flex flex-wrap justify-center align-center content-center">
+      <section className="postListing px-4 flex flex-wrap align-stretch">
         {/* Your post list here. */
         postList.map(post => (
-          <article key={post.title} className={`post m-4 flex flex-col items-stretch relative rounded cat-${post.category} ${post.tags}`}>
+          <article key={post.title} className={`post max-w-full w-full mb-8 md:mx-4 flex flex-col items-stretch relative rounded cat-${_.kebabCase(post.category)} ${post.tags}`}>
             <div className="postCat theme-font text-sm text-gray-700 uppercase tracking-wide flex items-center">
               {post.category}
             </div>

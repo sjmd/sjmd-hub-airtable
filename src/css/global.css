@@ -4,6 +4,14 @@
 
 /* purgecss start ignore */
 
+:root {
+    --blue-100: #F0FBFF;
+    --blue-300: #AAE8FF;
+    --blue-500: #67C2E7;
+    --blue-700: #20799D;
+    --blue-900: #02131A;
+}
+
 @import url("https://use.typekit.net/uwk0unl.css");
 
 html {
@@ -16,40 +24,35 @@ h1, h2, h3, h4, h5, h6, .theme-font {
     font-style: normal;
 }
 
-.cat-Watch .text-gray-700 {@apply text-pink-700;}
-.cat-Watch .text-gray-900 {@apply text-pink-900;}
-.cat-Watch .bg-gray-500 {@apply bg-pink-500;}
-.cat-Watch .bg-gray-100 {@apply bg-pink-100;}
+.cat-watch-this .text-gray-700 {@apply text-pink-700;}
+.cat-watch-this .text-gray-900 {@apply text-pink-900;}
+.cat-watch-this .bg-gray-500 {@apply bg-pink-500;}
+.cat-watch-this .bg-gray-100 {@apply bg-pink-100;}
 
-.cat-Read .text-gray-700 {@apply text-orange-700;}
-.cat-Read .text-gray-900 {@apply text-orange-900;}
-.cat-Read .bg-gray-500 {@apply bg-orange-500;}
-.cat-Read .bg-gray-100 {@apply bg-orange-100;}
+.cat-read-this .text-gray-700 {@apply text-orange-700;}
+.cat-read-this .text-gray-900 {@apply text-orange-900;}
+.cat-read-this .bg-gray-500 {@apply bg-orange-500;}
+.cat-read-this .bg-gray-100 {@apply bg-orange-100;}
 
-.cat-Facilitate .text-gray-700 {@apply text-purple-700;}
-.cat-Facilitate .text-gray-900 {@apply text-purple-900;}
-.cat-Facilitate .bg-gray-500 {@apply bg-purple-500;}
-.cat-Facilitate .bg-gray-100 {@apply bg-purple-100;}
+.cat-facilitate-this .text-gray-700 {@apply text-purple-700;}
+.cat-facilitate-this .text-gray-900 {@apply text-purple-900;}
+.cat-facilitate-this .bg-gray-500 {@apply bg-purple-500;}
+.cat-facilitate-this .bg-gray-100 {@apply bg-purple-100;}
 
-.cat-Click .text-gray-700 {@apply text-yellow-700;}
-.cat-Click .text-gray-900 {@apply text-yellow-900;}
-.cat-Click .bg-gray-500 {@apply bg-yellow-500;}
-.cat-Click .bg-gray-100 {@apply bg-yellow-100;}
+.cat-click-this .text-gray-700 {@apply text-yellow-700;}
+.cat-click-this .text-gray-900 {@apply text-yellow-900;}
+.cat-click-this .bg-gray-500 {@apply bg-yellow-500;}
+.cat-click-this .bg-gray-100 {@apply bg-yellow-100;}
 
-.cat-Listen .text-gray-700 {@apply text-green-700;}
-.cat-Listen .text-gray-900 {@apply text-green-900;}
-.cat-Listen .bg-gray-500 {@apply bg-green-500;}
-.cat-Listen .bg-gray-100 {@apply bg-green-100;}
+.cat-listen-to-this .text-gray-700 {@apply text-green-700;}
+.cat-listen-to-this .text-gray-900 {@apply text-green-900;}
+.cat-listen-to-this .bg-gray-500 {@apply bg-green-500;}
+.cat-listen-to-this .bg-gray-100 {@apply bg-green-100;}
 
 /* Post Listing */
 
 .postListing .post {
-    width: 380px;
-    max-width: 100%;
-    min-height: 380px;
-    border-radius: 20px;
     padding: 20px;
-    margin: 30px;
     position: relative;
     transition: all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -74,11 +77,11 @@ h1, h2, h3, h4, h5, h6, .theme-font {
         background: white;
     }
 
-    .postListing .cat-Watch.post:after { @apply bg-pink-100; }
-    .postListing .cat-Listen.post:after { @apply bg-green-100; }
-    .postListing .cat-Click.post:after { @apply bg-yellow-100; }
-    .postListing .cat-Read.post:after { @apply bg-orange-100; }
-    .postListing .cat-Facilitate.post:after { @apply bg-purple-100; }
+    .postListing .cat-watch-this.post:after { @apply bg-pink-100; }
+    .postListing .cat-listen-to-this.post:after { @apply bg-green-100; }
+    .postListing .cat-click-this.post:after { @apply bg-yellow-100; }
+    .postListing .cat-read-this.post:after { @apply bg-orange-100; }
+    .postListing .cat-facilitate-this.post:after { @apply bg-purple-100; }
 
     .postListing .post:hover:after {
         top: -10px;
@@ -89,11 +92,11 @@ h1, h2, h3, h4, h5, h6, .theme-font {
         @apply bg-pink-300;
     }
 
-    .postListing .cat-Watch.post:hover:after { @apply bg-pink-300; }
-    .postListing .cat-Listen.post:hover:after { @apply bg-green-300; }
-    .postListing .cat-Click.post:hover:after { @apply bg-yellow-300; }
-    .postListing .cat-Read.post:hover:after { @apply bg-orange-300; }
-    .postListing .cat-Facilitate.post:hover:after { @apply bg-purple-300; }
+    .postListing .cat-watch-this.post:hover:after { @apply bg-pink-300; }
+    .postListing .cat-listen-to-this.post:hover:after { @apply bg-green-300; }
+    .postListing .cat-click-this.post:hover:after { @apply bg-yellow-300; }
+    .postListing .cat-read-this.post:hover:after { @apply bg-orange-300; }
+    .postListing .cat-facilitate-this.post:hover:after { @apply bg-purple-300; }
 
     .postListing .postCat, .postListing .postDate {
         position: absolute;
@@ -141,8 +144,8 @@ h1, h2, h3, h4, h5, h6, .theme-font {
     transform: translateY(-50%);
 }
 
-main.This {
-    padding: 20px;
+main.Single {
+    padding: 0 20px;
 }
 
     .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
@@ -166,12 +169,21 @@ main.This {
         text-decoration: uppercase;
     }
 
+    .entry-content a:not(.anchor) {
+        border-bottom: .125em solid var(--blue-500);
+        background: var(--blue-100);
+    }
+
+        .entry-content a:not(.anchor):hover {
+            background: var(--blue-300);
+        }
+
     .entry-content p {
         margin-bottom: 1.5rem;
     }
 
     .entry-content ul, .entry-content ol, .entry-content pre, .entry-content address, .entry-content blockquote {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.5em;
     }
 
     .entry-content ul, .entry-content ol {
@@ -196,30 +208,34 @@ main.This {
 
 @media only screen and (min-width: 768px) {
 
+    .postListing .post {
+        width: calc(50% - 2rem);
+    }
+
     /* Featured Posts */
 
-    .postListing .post.cat-Facilitate {
-        width: 820px;
+    .postListing .post.cat-facilitate-this {
+        width: calc(100% - 2rem);
         flex-direction: row;
     }
 
-        .postListing .post.cat-Facilitate .postImage {
+        .postListing .post.cat-facilitate-this .postImage {
             height: 100%;
-            min-width: 420px;
+            min-width: calc(310px + 2rem);
             margin-right: 20px;
         }
 
-        .postListing .post.cat-Facilitate .postExcerpt {
+        .postListing .post.cat-facilitate-this .postExcerpt {
             display: block;
         }
 
-        .postListing .post.cat-Facilitate .postAuthor {
+        .postListing .post.cat-facilitate-this .postAuthor {
             left: 460px;
         }
 
     /* Single View */
 
-    main.This {
+    main.Single {
         padding-left: 3rem;
     }
 
@@ -231,6 +247,31 @@ main.This {
         line-height: 1;
     }
     
+}
+
+@media only screen and (min-width: 1030px) {
+    .postListing .post {
+        width: calc(33.333% - 2rem);
+    }
+
+        .postListing .post.cat-facilitate-this {
+            width: calc(66.666% - 2rem);
+        }
+}
+
+@media only screen and (min-width: 1030px) {
+
+    .postListing {
+        padding: 0 1.5rem;
+    }
+    .postListing .post {
+        width: calc(33.333% - 3rem);
+        margin: 0 1.5rem 3rem;
+    }
+
+        .postListing .post.cat-facilitate-this {
+            width: calc(66.666% - 3rem);
+        }
 }
 
 /* purgecss end ignore */
