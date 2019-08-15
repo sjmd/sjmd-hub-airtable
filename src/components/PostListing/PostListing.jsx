@@ -28,7 +28,7 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <section className="postListing px-4 flex flex-wrap align-stretch">
+      <section className="postListing px-4 flex animateLeft flex-wrap align-stretch">
         {/* Your post list here. */
         postList.map(post => (
           <article key={post.title} className={`post max-w-full w-full mb-8 md:mx-4 flex flex-col items-stretch relative rounded cat-${_.kebabCase(post.category)} ${post.tags}`}>

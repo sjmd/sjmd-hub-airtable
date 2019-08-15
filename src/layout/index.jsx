@@ -11,7 +11,7 @@ export default class MainLayout extends React.Component {
     return (
       
       <div className="outerWrap">
-        <header id="masthead" className="py-2 pr-4 flex justify-between md:justify-start md:pr-8">
+        <header id="masthead" className="py-2 pr-4 max-w-full flex justify-between md:justify-start md:pr-8">
           <Logo />
           <Nav />
         </header>

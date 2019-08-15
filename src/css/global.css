@@ -206,6 +206,43 @@ main.Single {
         list-style: decimal;
     }
 
+/* Animations */
+
+.animateLeft {
+    animation: slideLeft 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    
+    @keyframes slideLeft {
+        
+    from {
+        opacity: 0;
+        transform: translate3d(-20rem, 0, 500rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+.animateUp {
+    animation: slideUp 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    }
+    
+    @keyframes slideUp {
+        
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20rem, 500rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 @media only screen and (min-width: 768px) {
 
     .postListing .post {

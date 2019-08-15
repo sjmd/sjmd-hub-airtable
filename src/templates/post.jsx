@@ -35,7 +35,7 @@ export default class PostTemplate extends React.Component {
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
           <div class="main-wrap flex flex-wrap relative">
-            <main className={`Single w-full md:w-4/5 cat-${_.kebabCase(post.category)}`}>
+            <main className={`Single animateUp w-full md:w-4/5 cat-${_.kebabCase(post.category)}`}>
               <div className="postImage bg-gray-500"
               style={{
                 backgroundImage: 'url(' + imageUrl + ')',
