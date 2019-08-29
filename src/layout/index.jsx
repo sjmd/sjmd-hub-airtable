@@ -17,8 +17,6 @@ export default class MainLayout extends React.Component {
         </header>
         <Helmet>
           <meta name="description" content={config.siteDescription} />
-          <script async data-uid="96e99be32b" src="https://social-justice-minus-dogma.ck.page/96e99be32b/index.js"></script>
-
         </Helmet>
           {children}
       </div>
