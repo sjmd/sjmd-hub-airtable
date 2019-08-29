@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-import moment from 'moment';
+import moment from "moment";
 const _ = require("lodash");
 import siteConfig from "../../../data/SiteConfig";
-import Gravatar from 'react-gravatar';
-
+import Gravatar from "react-gravatar";
 
 class PostListing extends React.Component {
   getPostList() {
@@ -53,7 +52,7 @@ class PostListing extends React.Component {
             <div className="postDate theme-font text-sm text-gray-700 uppercase tracking-wide flex items-center">
               {post.date}
             </div>
-            <Link className="absolute top-0 right-0 left-0 bottom-0" to={post.path} key={post.title}></Link>    
+            <Link className="absolute top-0 right-0 left-0 bottom-0" to={post.path} key={post.title} ></Link>    
           </article>
         ))}
       </section>

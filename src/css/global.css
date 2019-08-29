@@ -49,6 +49,8 @@ h1, h2, h3, h4, h5, h6, .theme-font {
 .cat-listen-to-this .bg-gray-500 {@apply bg-green-500;}
 .cat-listen-to-this .bg-gray-100 {@apply bg-green-100;}
 
+/* Header */
+
 /* Post Listing */
 
 .postListing .post {
@@ -225,7 +227,6 @@ main.Single {
     }
 }
 
-
 .animateUp {
     animation: slideUp 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
@@ -242,6 +243,45 @@ main.Single {
         transform: translate3d(0, 0, 0);
     }
 }
+
+.animateRight {
+    animation: slideRight 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+    
+    @keyframes slideRight {
+        
+    from {
+        opacity: 0;
+        transform: translate3d(20rem, 0, 500rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/**************************************************
+***************************************************
+**************** MEDIA QUERIES ********************
+***************************************************
+**************************************************/
+
+/* Small Screens Only */
+
+@media only screen and (max-width: 767px) {
+
+    .Nav {
+        mask-image: -webkit-linear-gradient(to right, transparent, white 20px, white 90%, transparent);
+        mask-image: -moz-linear-gradient(to right, transparent, white 20px, white 90%, transparent);
+        mask-image: linear-gradient(to right, transparent, white 20px, white 90%, transparent);
+        -webkit-mask-image: -webkit-linear-gradient(to right, transparent, white 20px, white 90%, transparent);
+        -webkit-mask-image: -moz-linear-gradient(to right, transparent, white 20px, white 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, white 20px, white 90%, transparent);
+        
+    }
+}
+/* Tablet Screens */
 
 @media only screen and (min-width: 768px) {
 
@@ -287,12 +327,18 @@ main.Single {
 }
 
 @media only screen and (min-width: 1030px) {
+    
+    .postListing {
+        padding: 0 1.5rem;
+    }
+
     .postListing .post {
-        width: calc(33.333% - 2rem);
+        width: calc(33.333% - 3rem);
+        margin: 0 1.5rem 3rem;
     }
 
         .postListing .post.cat-facilitate-this {
-            width: calc(66.666% - 2rem);
+            width: calc(66.666% - 3rem);
         }
 
         .postListing .post.cat-facilitate-this .postImage {
@@ -303,21 +349,6 @@ main.Single {
         .postListing .post.cat-facilitate-this .postAuthor {
             left:calc(50% + 1.5rem + 20px);
         }  
-}
-
-@media only screen and (min-width: 1030px) {
-
-    .postListing {
-        padding: 0 1.5rem;
-    }
-    .postListing .post {
-        width: calc(33.333% - 3rem);
-        margin: 0 1.5rem 3rem;
-    }
-
-        .postListing .post.cat-facilitate-this {
-            width: calc(66.666% - 3rem);
-        }
 }
 
 /* purgecss end ignore */

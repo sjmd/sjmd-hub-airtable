@@ -11,12 +11,14 @@ export default class MainLayout extends React.Component {
     return (
       
       <div className="outerWrap">
-        <header id="masthead" className="py-2 pr-4 max-w-full flex justify-between md:justify-start md:pr-8">
+        <header id="masthead" className="py-2 max-w-full flex justify-between md:justify-start md:pr-8">
           <Logo />
           <Nav />
         </header>
         <Helmet>
           <meta name="description" content={config.siteDescription} />
+          <script async data-uid="96e99be32b" src="https://social-justice-minus-dogma.ck.page/96e99be32b/index.js"></script>
+
         </Helmet>
           {children}
       </div>

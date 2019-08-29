@@ -72,7 +72,7 @@ export default class PostTemplate extends React.Component {
               
               <Disqus postNode={postNode} />
             </main>
-            <aside className="sidebar w-full overflow-hidden md:w-1/5" role="sidebar">
+            <aside className="sidebar animateRight w-full overflow-hidden md:w-1/5" role="sidebar">
             </aside>
           </div>
       </Layout>
