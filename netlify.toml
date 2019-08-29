@@ -3,3 +3,9 @@
   command = "yarn run build"
 [build.environment]
   YARN_VERSION = "1.7.0"
+
+[[redirects]]
+	from = "https://sjmd-hub-airtable.netlify.com/*"
+	to = "https://hub.sjmd.space/:splat"
+	status = 301
+	force = true #COMMENT: ensure that we always redirect
